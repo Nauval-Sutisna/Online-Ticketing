@@ -2,10 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Tiket extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
         'event_id',
         'tipe',
@@ -25,8 +28,7 @@ class Tiket extends Model
 
     public function orders()
     {
-        return $this->belongsToMany(Order::class, 'detail_orders')->withPivot('jumlah', 'subtotal_harga');
+        return $this->belongsToMany(Order::class, 'detail_orders')
+            ->withPivot('jumlah', 'subtotal_harga');
     }
-
-    
 }

@@ -8,9 +8,6 @@ use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         $users = [
@@ -28,6 +25,7 @@ class UserSeeder extends Seeder
                 'role' => 'user',
             ]
         ];
+
         foreach ($users as $user) {
             User::create($user);
         }

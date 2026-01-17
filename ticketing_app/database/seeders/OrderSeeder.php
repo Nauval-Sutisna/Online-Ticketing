@@ -9,9 +9,6 @@ use Illuminate\Database\Seeder;
 
 class OrderSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         $orders = [
@@ -28,6 +25,7 @@ class OrderSeeder extends Seeder
                 'total_harga' => 200000,
             ],
         ];
+
         $order_details = [
             [
                 'order_id' => 1,
@@ -42,10 +40,11 @@ class OrderSeeder extends Seeder
                 'subtotal_harga' => 200000,
             ],
         ];
+
         foreach ($orders as $order) {
             Order::create($order);
         }
-        // Assuming you have an OrderDetail model
+
         foreach ($order_details as $detail) {
             DetailOrder::create($detail);
         }

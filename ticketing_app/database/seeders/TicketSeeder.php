@@ -8,9 +8,6 @@ use Illuminate\Database\Seeder;
 
 class TicketSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         $tickets = [
@@ -39,6 +36,7 @@ class TicketSeeder extends Seeder
                 'stok' => 200,
             ],
         ];
+
         foreach ($tickets as $ticket) {
             Tiket::create($ticket);
         }

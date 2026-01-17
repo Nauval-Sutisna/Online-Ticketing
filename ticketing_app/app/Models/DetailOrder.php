@@ -2,10 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class DetailOrder extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
         'order_id',
         'tiket_id',
@@ -22,6 +25,4 @@ class DetailOrder extends Model
     {
         return $this->belongsTo(Tiket::class);
     }
-
-    
 }
