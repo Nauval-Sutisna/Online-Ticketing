@@ -17,7 +17,7 @@ class EventSeeder extends Seeder
                 'tanggal_waktu' => '2024-08-15 19:00:00',
                 'lokasi' => 'Stadion Utama',
                 'kategori_id' => 1,
-                'gambar' => 'events/konser_rock.jpg',
+                'gambar' => 'konser_rock.jpg',
             ],
             [
                 'user_id' => 1,

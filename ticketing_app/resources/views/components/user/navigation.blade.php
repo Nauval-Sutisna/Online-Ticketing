@@ -12,7 +12,7 @@
             <img src={{ asset('assets/images/logo_bengkod.svg') }} />
         </a>
     </div>
-    <div class="navbar-center hidden lg:flex">
+    <div class="navbar-center flex">
         <input class="input w-72" placeholder="Cari Event..." />
     </div>
     <div class="navbar-end gap-2">
@@ -43,7 +43,7 @@
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 Logout
                         </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden"> 
                             @csrf
                         </form>
                     </li>
